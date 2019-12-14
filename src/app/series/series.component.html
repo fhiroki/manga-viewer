@@ -1,9 +1,16 @@
 <h3>Series</h3>
-<div class="grid grid-pad">
-  <a *ngFor="let book of series.books" class="col-1-4"
-      routerLink="/books/{{book.id}}">
-    <div>
-      <h4>{{book.title}}</h4>
-    </div>
-  </a>
+
+<div>
+	<mdc-image-list fxLayout="row wrap" class="standard-image-list">
+		<mdc-image-list-item *ngFor="let book of series.books">
+      <div routerLink="/books/{{book.id}}">
+        <mdc-image-list-image-aspect>
+          <img mdcImageListImage src="{{book.image}}" width="300" height="400"/>
+        </mdc-image-list-image-aspect>
+        <mdc-image-list-supporting>
+          <span mdcImageListLabel>{{ book.title }}</span>
+        </mdc-image-list-supporting>
+      </div>
+    </mdc-image-list-item>
+	</mdc-image-list>
 </div>

@@ -18,8 +18,7 @@
     <span [class]="config.btnIcons.zoomOut"></span>
   </button>
   <button type="button" [class]="config.btnClass" *ngIf="config.btnShow.zoomIn" (click)="zoomIn()">
-    <!-- <span [class]="config.btnIcons.zoomIn"></span> -->
-    <span class="fa fa-plus"></span>
+    <span [class]="config.btnIcons.zoomIn"></span>
   </button>
 
   <button type="button" [class]="config.btnClass" *ngFor="let cBtn of config.customBtns" (click)="fireCustomEvent(cBtn.name, index)">

@@ -8,6 +8,10 @@ import { ImageViewerModule } from "ngx-image-viewer";
 import { HttpClientModule } from '@angular/common/http';
 import { BookComponent } from './book/book.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdcImageListModule } from '@angular-mdc/web'
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ImageViewerModule.forRoot()
+    BrowserAnimationsModule,
+    MdcImageListModule,
+    FlexLayoutModule,
+    ImageViewerModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
