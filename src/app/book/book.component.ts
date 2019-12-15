@@ -13,7 +13,7 @@ export class BookComponent implements OnInit {
   title = 'manga-viewer';
   book: Book;
   images = [];
-  imageIndex = 1;
+  imageIndex = 0;
 
   constructor(
     private bookService: BookService,
