@@ -4,14 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ImageViewerModule } from "ngx-image-viewer";
 import { HttpClientModule } from '@angular/common/http';
 import { BookComponent } from './book/book.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdcImageListModule } from '@angular-mdc/web'
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { ImageViewerModule } from './image-viewer/image-viewer.module';
 
 @NgModule({
   declarations: [

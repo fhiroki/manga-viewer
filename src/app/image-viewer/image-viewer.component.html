@@ -26,10 +26,10 @@
   </button>
 
   <div class="nav-button-container" *ngIf="src.length > 1">
-    <button type="button" [class]="config.btnClass" (click)="prevImage()" [disabled]="index === 0">
+    <button type="button" [class]="config.btnClass" (click)="prevImage($event)" [disabled]="index === 0">
       <span [class]="config.btnIcons.prev"></span>
     </button>
-    <button type="button" [class]="config.btnClass" (click)="nextImage()" [disabled]="index === src.length - 1">
+    <button type="button" [class]="config.btnClass" (click)="nextImage($event)" [disabled]="index === src.length - 1">
       <span [class]="config.btnIcons.next"></span>
     </button>
   </div>
