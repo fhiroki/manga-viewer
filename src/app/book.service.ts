@@ -30,28 +30,6 @@ export class BookService {
       );
   }
 
-  // getBooks (id: number): Observable<Book[]> {
-  //   return this.http.get<Book[]>(this.mangasUrl)
-  //     .pipe(
-  //       tap(heroes => this.log('fetched heroes')),
-  //       catchError(this.handleError<Book[]>('getBookes', []))
-  //     );
-  // }
-
-  /** IDによりヒーローを取得する。idが見つからない場合は`undefined`を返す。 */
-  // getBookNo404<Data>(id: number): Observable<Book> {
-  //   const url = `${this.mangasUrl}/?id=${id}`;
-  //   return this.http.get<Book[]>(url)
-  //     .pipe(
-  //       map(heroes => heroes[0]), // {0|1} 要素の配列を返す
-  //       tap(h => {
-  //         const outcome = h ? `fetched` : `did not find`;
-  //         this.log(`${outcome} hero id=${id}`);
-  //       }),
-  //       catchError(this.handleError<Book>(`getBook id=${id}`))
-  //     );
-  // }
-
   getSeries(id: number): Observable<Series> {
     const url = `${this.mangasUrl}/series/${id}`;
     return this.http.get<Series>(url).pipe(
@@ -77,16 +55,6 @@ export class BookService {
     return this.http.get<Book[]>(`${this.mangasUrl}/?name=${term}`).pipe(
       tap(_ => this.log(`found heroes matching "${term}"`)),
       catchError(this.handleError<Book[]>('searchBookes', []))
-    );
-  }
-
-  //////// Save methods //////////
-
-  /** POST: サーバーに新しいヒーローを登録する */
-  addBook (hero: Book): Observable<Book> {
-    return this.http.post<Book>(this.mangasUrl, hero, this.httpOptions).pipe(
-      tap((newBook: Book) => this.log(`added hero w/ id=${newBook.seriesId}`)),
-      catchError(this.handleError<Book>('addBook'))
     );
   }
 

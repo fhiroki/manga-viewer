@@ -13,14 +13,12 @@ export class BookComponent implements OnInit {
   title = 'manga-viewer';
   book: Book;
   images = [];
+  imageIndex = 1;
 
   constructor(
     private bookService: BookService,
     private route: ActivatedRoute) {
   }
-
-  imageIndex = 1;
-  config: ImageViewerConfig = {customBtns: [{name: 'print', icon: 'fa fa-print'}, {name: 'link', icon: 'fa fa-link'}]};
 
   ngOnInit() {
     this.getBook()

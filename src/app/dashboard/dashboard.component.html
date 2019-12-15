@@ -1,16 +1,19 @@
+<div class="outer">
+  <h3>漫画村</h3>
+  <p>漫画が無料で読めるサイトです。</p>
 
-<h3>Mangas</h3>
-<div>
-	<mdc-image-list fxLayout="row wrap" fxLayoutAlign="space-between" class="standard-image-list">
-		<mdc-image-list-item *ngFor="let comic of comics">
-      <div routerLink="/series/{{comic.seriesId}}">
-        <mdc-image-list-image-aspect>
-          <img mdcImageListImage src="{{comic.seriesImage}}" width="300" height="400"/>
-        </mdc-image-list-image-aspect>
-        <mdc-image-list-supporting>
-          <span mdcImageListLabel>{{ comic.title }}</span>
-        </mdc-image-list-supporting>
-      </div>
-    </mdc-image-list-item>
-	</mdc-image-list>
+  <div>
+    <mdc-image-list fxLayout="row wrap" fxLayoutAlign="space-between" class="standard-image-list">
+      <mdc-image-list-item *ngFor="let comic of comics">
+        <div style="text-align: center;" routerLink="/series/{{comic.seriesId}}">
+          <mdc-image-list-image-aspect>
+            <img mdcImageListImage src="{{comic.seriesImage}}" width="300" height="400"/>
+          </mdc-image-list-image-aspect>
+          <mdc-image-list-supporting>
+            <span mdcImageListLabel>{{ comic.title }}</span>
+          </mdc-image-list-supporting>
+        </div>
+      </mdc-image-list-item>
+    </mdc-image-list>
+  </div>
 </div>

@@ -33,7 +33,6 @@ const DEFAULT_CONFIG: ImageViewerConfig = {
   styleUrls: ['./image-viewer.component.scss']
 })
 export class ImageViewerComponent implements OnInit {
-
   @Input()
   src: string[];
 
