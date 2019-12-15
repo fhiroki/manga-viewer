@@ -1,7 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+/dist/manga-viewer/*
+!/dist/manga-viewer/_redirects
 /tmp
 /out-tsc
 # Only exists if Bazel was run
