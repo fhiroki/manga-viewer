@@ -28,7 +28,6 @@ export class BookComponent implements OnInit {
     const id = this.route.snapshot.params['id'];
     this.bookService.getBook(id)
       .subscribe((data: any) => {
-        console.log(data);
         this.book = data;
 
         data.imageData.forEach((image) => {
