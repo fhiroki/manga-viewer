@@ -170,6 +170,16 @@ export class ImageViewerComponent implements OnInit {
     this.updateStyle();
   }
 
+  @HostListener('mouseover')
+  onMouseOver() {
+    this.hovered = true;
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave() {
+    this.hovered = false;
+  }
+
   private canNavigate(event: any) {
     return event == null ||  (this.config.allowKeyboardNavigation && this.hovered);
   }

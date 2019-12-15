@@ -5,7 +5,7 @@
   <div>
     <mdc-image-list fxLayout="row wrap" fxLayoutAlign="space-between" class="standard-image-list">
       <mdc-image-list-item *ngFor="let comic of comics">
-        <div style="text-align: center;" routerLink="/series/{{comic.seriesId}}">
+        <div class="image-list" routerLink="/series/{{comic.seriesId}}">
           <mdc-image-list-image-aspect>
             <img mdcImageListImage src="{{comic.seriesImage}}" width="300" height="400"/>
           </mdc-image-list-image-aspect>
